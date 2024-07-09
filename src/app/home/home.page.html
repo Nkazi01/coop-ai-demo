@@ -1,20 +1,28 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
+<ion-header class="navigation" [translucent]="true">
+  <ion-toolbar class="custom-toolbar">
+    <ion-title class="custom-title">
+      CURRENT VIEW PAGE
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
+<ion-content class="content">
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <div class="questionmark">
+      <a (click)="openWelcomeModal()"><img [src]="image1" alt="chaticon"></a>
+    </div>
   </div>
+
+  <!-- Add modals here -->
+  <ion-modal [isOpen]="isWelcomeModalOpen" (didDismiss)="closeWelcomeModal()">
+    <ng-template>
+      <app-welcome></app-welcome>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal [isOpen]="isChatModalOpen" (didDismiss)="closeChatModal()">
+    <ng-template>
+      <app-chat></app-chat>
+    </ng-template>
+  </ion-modal>
 </ion-content>

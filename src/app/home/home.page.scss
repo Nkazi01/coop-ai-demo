@@ -1,27 +1,33 @@
-#container {
+.questionmark {
+ position: fixed;
+ bottom: 20px;
+ left: 20px;
+ z-index: 1000; /* Ensure it stays on top of other elements */
+}
+
+.questionmark img {
+  width: 60px; /* Adjust size as needed */
+  height: 60px; /* Adjust size as needed */
+  cursor: pointer;
+  /* Optional: add styles for hover effect */
+  transition: transform 0.3s ease;
+}
+
+.questionmark img:hover {
+  transform: scale(1.1);
+}
+
+.custom-toolbar {
+  background-color: maroon;
+}
+
+.custom-title {
+  color: white;
   text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  width: 100%;
+  height: 100%;
+  background-color: maroon;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
-}

@@ -1,0 +1,27 @@
+// :host {
+//     display: block;
+//     padding: 25px 15px 25px 15px;
+//     margin: 50px 15px 25px 15px;
+//     //width:50%;
+//     //height:70%;
+//     //border-radius: 20%;
+//     //background: rgb(168, 165, 165);
+//   }
+
+.welcome-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    //width: 50%;
+    background: #fff; /* White background to simulate a reboot */
+  }
+  
+  .loading-container {
+    text-align: center;
+  }
+  
+  .loading-container ion-spinner {
+    margin-bottom: 0px;
+  }
+  
