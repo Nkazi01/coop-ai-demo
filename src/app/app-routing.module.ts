@@ -24,7 +24,11 @@ const routes: Routes = [
   {
     path: 'chat',
     component: ChatComponent // Example route for 'chat' component
+  },  {
+    path: 'notifications',
+    loadChildren: () => import('./notifications/notifications.module').then( m => m.NotificationsPageModule)
   }
+
 ];
 
 @NgModule({
